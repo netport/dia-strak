@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E56a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Prototype" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ri-TA-YFS">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable background tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr5-0s-y0W">
+                                        <rect key="frame" x="28" y="12" width="231" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="231" id="psD-oZ-DDU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdm-0G-I2P">
+                                        <rect key="frame" x="543" y="7" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Kr5-0s-y0W" firstAttribute="leading" secondItem="4Ri-TA-YFS" secondAttribute="leading" constant="28" id="1Oz-D2-7Q1"/>
+                                    <constraint firstItem="Vdm-0G-I2P" firstAttribute="centerY" secondItem="Kr5-0s-y0W" secondAttribute="centerY" id="9wb-bH-V79"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Vdm-0G-I2P" secondAttribute="trailing" id="AsP-Ja-J6h"/>
+                                    <constraint firstItem="Kr5-0s-y0W" firstAttribute="centerY" secondItem="4Ri-TA-YFS" secondAttribute="centerY" id="QVG-OZ-CSI"/>
+                                    <constraint firstAttribute="height" constant="44" id="VFY-B7-9Py"/>
+                                    <constraint firstItem="Vdm-0G-I2P" firstAttribute="trailing" secondItem="4Ri-TA-YFS" secondAttribute="trailingMargin" id="ygt-V8-ep6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19215686274509802" green="0.43529411764705883" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Ri-TA-YFS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5l2-va-z2k"/>
+                            <constraint firstAttribute="trailing" secondItem="4Ri-TA-YFS" secondAttribute="trailing" id="EBf-k3-Krd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Ri-TA-YFS" secondAttribute="bottom" id="Eet-lZ-up2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Ri-TA-YFS" secondAttribute="bottom" id="t15-Mt-fNO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="350"/>
+        </scene>
+    </scenes>
+</document>
