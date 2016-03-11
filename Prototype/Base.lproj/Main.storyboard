@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E56a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15E61b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,41 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ri-TA-YFS">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1c1-OQ-XvZ">
+                                <rect key="frame" x="30" y="20" width="540" height="580"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable background tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr5-0s-y0W">
-                                        <rect key="frame" x="28" y="12" width="231" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="231" id="psD-oZ-DDU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiW-zv-eIS">
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="80"/>
+                                        <string key="text">This application prototype is part of a concept being developed by NetPort Science Park in collaboration with Tourism in Blekinge. It tracks your location in order to collect valuable data for the project partners.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vdm-0G-I2P">
-                                        <rect key="frame" x="543" y="7" width="51" height="31"/>
-                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxt-Rz-KOC">
+                                        <rect key="frame" x="0.0" y="272" width="540" height="61"/>
+                                        <string key="text">Please keep tracking enabled as much as possible and only turn it off to conserve battery or to stop your location being tracked for privacy reasons.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvJ-oV-4nr">
+                                        <rect key="frame" x="0.0" y="549" width="540" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable background tracking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kr5-0s-y0W">
+                                                <rect key="frame" x="0.0" y="0.0" width="491" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vdm-0G-I2P">
+                                                <rect key="frame" x="491" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="trackingChoiceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rb0-bn-xHt"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Kr5-0s-y0W" firstAttribute="leading" secondItem="4Ri-TA-YFS" secondAttribute="leading" constant="28" id="1Oz-D2-7Q1"/>
-                                    <constraint firstItem="Vdm-0G-I2P" firstAttribute="centerY" secondItem="Kr5-0s-y0W" secondAttribute="centerY" id="9wb-bH-V79"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Vdm-0G-I2P" secondAttribute="trailing" id="AsP-Ja-J6h"/>
-                                    <constraint firstItem="Kr5-0s-y0W" firstAttribute="centerY" secondItem="4Ri-TA-YFS" secondAttribute="centerY" id="QVG-OZ-CSI"/>
-                                    <constraint firstAttribute="height" constant="44" id="VFY-B7-9Py"/>
-                                    <constraint firstItem="Vdm-0G-I2P" firstAttribute="trailing" secondItem="4Ri-TA-YFS" secondAttribute="trailingMargin" id="ygt-V8-ep6"/>
+                                    <constraint firstItem="SvJ-oV-4nr" firstAttribute="leading" secondItem="1c1-OQ-XvZ" secondAttribute="leading" id="B9M-QO-bFU"/>
+                                    <constraint firstItem="Hxt-Rz-KOC" firstAttribute="leading" secondItem="1c1-OQ-XvZ" secondAttribute="leadingMargin" id="WZg-1v-35d"/>
+                                    <constraint firstItem="JiW-zv-eIS" firstAttribute="leading" secondItem="1c1-OQ-XvZ" secondAttribute="leading" id="rnb-dC-7vf"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.43529411764705883" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="4Ri-TA-YFS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5l2-va-z2k"/>
-                            <constraint firstAttribute="trailing" secondItem="4Ri-TA-YFS" secondAttribute="trailing" id="EBf-k3-Krd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Ri-TA-YFS" secondAttribute="bottom" id="Eet-lZ-up2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Ri-TA-YFS" secondAttribute="bottom" id="t15-Mt-fNO"/>
+                            <constraint firstItem="1c1-OQ-XvZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="AcK-qt-9Eq"/>
+                            <constraint firstItem="1c1-OQ-XvZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-10" id="SKd-c4-0Zc"/>
+                            <constraint firstItem="1c1-OQ-XvZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Sly-4g-UjM"/>
+                            <constraint firstItem="1c1-OQ-XvZ" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="vjz-u8-7mu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationSwitch" destination="Vdm-0G-I2P" id="kKB-TA-awf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
