@@ -11,25 +11,20 @@ import CoreLocation
 
 final class Record: NSObject, NSCoding {
     var location: CLLocation
-    var timestamp: NSDate
 
-    init(location: CLLocation, timestamp: NSDate = NSDate()) {
+    init(location: CLLocation) {
         self.location = location
-        self.timestamp = timestamp
     }
 
     // MARK: - NSCoding
 
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let location = aDecoder.decodeObjectForKey("location") as? CLLocation,
-            let timestamp = aDecoder.decodeObjectForKey("timestamp") as? NSDate
+        guard let location = aDecoder.decodeObjectForKey("location") as? CLLocation
             else { return nil }
-
-        self.init(location: location, timestamp: timestamp)
+        self.init(location: location)
     }
 
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(location, forKey: "location")
-        aCoder.encodeObject(timestamp, forKey: "timestamp")
     }
 }
