@@ -72,9 +72,9 @@ final class ViewController: UIViewController {
 
     // Subscribe to app state change notifications, so we can stop/start location services.
     func configureNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("applicationWillResignActive"), name: UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("applicationWillEnterForeground"), name: UIApplicationWillEnterForegroundNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("applicationWillTerminate"), name: UIApplicationWillTerminateNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.applicationWillResignActive), name: UIApplicationWillResignActiveNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.applicationWillEnterForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.applicationWillTerminate), name: UIApplicationWillTerminateNotification, object: nil)
     }
 
     func configureLocationManager() {
@@ -162,5 +162,13 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         records += locations.map { Record(location: $0) }
     }
+}
+
+extension ViewController {
+
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+
 }
 
