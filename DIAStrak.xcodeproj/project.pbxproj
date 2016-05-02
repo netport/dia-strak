@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		554C480A1C91E93E007E4D82 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		554C480E1C92C530007E4D82 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		559F39C31C8E30A8006FF3AC /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		559F39C31C8E30A8006FF3AC /* DIAStrak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIAStrak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		559F39C61C8E30A8006FF3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		559F39C81C8E30A8006FF3AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		559F39CB1C8E30A8006FF3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		559F39C41C8E30A8006FF3AC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				559F39C31C8E30A8006FF3AC /* Prototype.app */,
+				559F39C31C8E30A8006FF3AC /* DIAStrak.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		559F39C21C8E30A8006FF3AC /* Prototype */ = {
+		559F39C21C8E30A8006FF3AC /* DIAStrak */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 559F39D51C8E30A8006FF3AC /* Build configuration list for PBXNativeTarget "Prototype" */;
+			buildConfigurationList = 559F39D51C8E30A8006FF3AC /* Build configuration list for PBXNativeTarget "DIAStrak" */;
 			buildPhases = (
 				559F39BF1C8E30A8006FF3AC /* Sources */,
 				559F39C01C8E30A8006FF3AC /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = Prototype;
+			name = DIAStrak;
 			productName = Prototype;
-			productReference = 559F39C31C8E30A8006FF3AC /* Prototype.app */;
+			productReference = 559F39C31C8E30A8006FF3AC /* DIAStrak.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -96,16 +96,18 @@
 		559F39BB1C8E30A8006FF3AC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Tap Away";
+				ORGANIZATIONNAME = "NetPort Science Park";
 				TargetAttributes = {
 					559F39C21C8E30A8006FF3AC = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = PG9T762V87;
 					};
 				};
 			};
-			buildConfigurationList = 559F39BE1C8E30A8006FF3AC /* Build configuration list for PBXProject "Prototype" */;
+			buildConfigurationList = 559F39BE1C8E30A8006FF3AC /* Build configuration list for PBXProject "DIAStrak" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				559F39C21C8E30A8006FF3AC /* Prototype */,
+				559F39C21C8E30A8006FF3AC /* DIAStrak */,
 			);
 		};
 /* End PBXProject section */
@@ -255,10 +257,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dia-strak.Prototype";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = se.netport.DIAStrak;
+				PRODUCT_NAME = DIAStrak;
 			};
 			name = Debug;
 		};
@@ -266,17 +269,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NetPort Karlshamn Aktiebolag (svb) (PG9T762V87)";
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dia-strak.Prototype";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = se.netport.DIAStrak;
+				PRODUCT_NAME = DIAStrak;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		559F39BE1C8E30A8006FF3AC /* Build configuration list for PBXProject "Prototype" */ = {
+		559F39BE1C8E30A8006FF3AC /* Build configuration list for PBXProject "DIAStrak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				559F39D31C8E30A8006FF3AC /* Debug */,
@@ -285,7 +289,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		559F39D51C8E30A8006FF3AC /* Build configuration list for PBXNativeTarget "Prototype" */ = {
+		559F39D51C8E30A8006FF3AC /* Build configuration list for PBXNativeTarget "DIAStrak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				559F39D61C8E30A8006FF3AC /* Debug */,

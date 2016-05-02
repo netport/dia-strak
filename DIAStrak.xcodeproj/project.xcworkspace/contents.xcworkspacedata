@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Prototype.xcodeproj">
+      location = "self:/Users/frebro/gh/netport/dia-strak/DIAStrak.xcodeproj">
    </FileRef>
 </Workspace>
